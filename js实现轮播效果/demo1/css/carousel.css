@@ -1,0 +1,6 @@
+.carouselImg {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  cursor: pointer;
+}
