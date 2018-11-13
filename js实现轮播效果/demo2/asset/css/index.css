@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 自适应宽度设置 */
+.adapt {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 页面头部css设置 */
+#header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.headBox {
+  width: 100%;
+  height: 60px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.language {
+  display: flex;
+  justify-content: space-between;
+  width: 60px;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-list-item {
+  padding: 0 10px;
+}
+
+.others {
+  width: 120px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.others-icon {
+  font-size: 20px !important;
+}
+
+.link {
+  text-decoration: none;
+  color: #999;
+}
+
+.link:hover {
+  color: #ccc;
+}
+
+/* section设置 */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carou-list {
+  list-style-type: none;
+}
+
+.carou-list-item {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.carou-list-item img {
+  width: 100%;
+  display: block;
+}
+
+.carou-tag {
+  width: 40%;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left: 30%;
+}
+
+.carou-tag-icon {
+  font-size: 100px !important;
+}
+
+.carou-tag-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 10% 0 5%;
+}
+
+.carou-tag-info {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+}
+
+.leftBody, .rightBody {
+  position: absolute;
+  top: 50px;
+}
+
+.dir-icon {
+  font-size: 100px !important;
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+}
+
+.left-icon {
+  left: 0;
+}
+
+.right-icon {
+  right: 0;
+}
+
+.search {
+  width: 100%;
+  height: 16%;
+  background-color: #434343;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.searchBody {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.s-input {
+  color: #fff;
+  padding: 15px;
+  border-radius: 2px;
+  border: 0;
+  outline: none;
+}
+
+.s-email {
+  width: 25%;
+}
+
+.s-email::-webkit-input-placeholder {
+  /* placeholder颜色  */
+  color: #fff;
+  /* placeholder字体大小  */
+  font-size: 15px;
+  /* placeholder位置  */
+  text-align: left;
+}
+
+.s-select {
+  font-size: 15px;
+  width: 50%;
+}
+
+.s-email,
+.s-select {
+  background-color: #666;
+}
+
+.s-submit {
+  width: 20%;
+  border-radius: 10%/50%;
+  background-color: #2a70e0;
+}
+
+.s-submit:hover {
+  background-color: #578adc;
+  cursor: pointer;
+}
+
+.content {
+  padding: 100px 0;
+}
+
+.content-body {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.con-body-icon {
+  color: #2a70e0;
+  font-size: 150px !important;
+}
+
+.con-body-title {
+  font-size: 40px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.con-body-info {
+  font-size: 20px;
+}
+
+.content-tags-list {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-tags {
+  margin-top: 80px;
+}
+
+.content-tags-list {
+  list-style-type: none;
+}
+
+.con-tags-icon {
+  font-size: 20px !important;
+}
+
+.con-tag-title {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.con-tag-text {
+  color: black;
+}
+
+.con-tag-text:hover {
+  color: #2a70e0;
+}
