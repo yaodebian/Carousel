@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#carousel-box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#carousel-item {
+  position: absolute;
+  width: calc(300px * 5);
+}
+
+/* 将轮播器中的每张图片平铺开来形成一张图片 */
+#carousel-item img {
+  float: left;
+  width: 300px;
+  height: 200px;
+}
+
+#showTag {
+  position: absolute;
+  /* 调整标题项的垂直位置 */
+  top: 10px;
+  opacity: 0.5;
+}
+
+#showTag li {
+  /* 根据图片宽度来设定标题宽度，并让标题平铺以放置在对应的轮播图片中 */
+  width: 200px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0 50px;
+  float: left;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background: #000;
+}
+
+/* 设定图片索引位置 */
+.num {
+  width: 25px;
+  height: 25px;
+  color: #666;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  display: block;
+  opacity: 0.8;
+}
+
+/* 调整索引位置 */
+.num:nth-child(4) {
+  margin-right: 30px;
+}
+.num:nth-child(3) {
+  margin-right: 60px;
+}
+.num:nth-child(2) {
+  margin-right: 90px;
+}
+.num:nth-child(1) {
+  margin-right: 120px;
+}
+
+/* 初试轮播动画 */
+@keyframes initAnimation {
+  /* 0-4s */
+  0%, 20% {
+    margin-left: 0px;
+  }
+  /* 4-8s */
+  25%, 40% {
+    margin-left: -300px;
+  }
+  /* 8-12s */
+  45%, 60% {
+    margin-left: -600px;
+  }
+  /* 12-16s */
+  65%, 80% {
+    margin-left: -900px;
+  }
+  /* 16-20s */
+  85%, 100% {
+    margin-left: -1200px;
+  }
+}
+
+/* 动画部署 */
+#carousel-item {
+  animation: initAnimation 20s ease-out infinite;
+}
+
+/* 索引悬浮高亮效果 */
+.num:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #f00;
+}
+
+/* 轮播悬浮暂停效果 */
+#carousel-item:hover, .num:hover {
+  animation-play-state: paused;
+}
+
+/* 索引悬浮触发动画 */
+@keyframes Anim1 {
+  100% {
+    margin-left: 0;
+  }
+}
+
+@keyframes Anim2 {
+  100% {
+    margin-left: -300px;
+  }
+}
+@keyframes Anim3 {
+  100% {
+    margin-left: -600px;
+  }
+}
+@keyframes Anim4 {
+  100% {
+    margin-left: -900px;
+  }
+}
+@keyframes Anim5 {
+  100% {
+    margin-left: -1200px;
+  }
+}
+
+/* 索引触发轮播效果 */
+#a1:hover ~ #carousel-item {
+  animation: Anim1 .5s ease-out forwards;
+}
+#a2:hover ~ #carousel-item {
+  animation: Anim2 .5s ease-out forwards;
+}
+#a3:hover ~ #carousel-item {
+  animation: Anim3 .5s ease-out forwards;
+}
+#a4:hover ~ #carousel-item {
+  animation: Anim4 .5s ease-out forwards;
+}
+#a5:hover ~ #carousel-item {
+  animation: Anim5 .5s ease-out forwards;
+}
