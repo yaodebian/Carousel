@@ -21,12 +21,15 @@ li {
 
 .slider-item {
   position: absolute;
+  /* 父辈.slider默认继承了.slide-container的宽度 */
   width: 100%;
+  /* 相当于background-size: 100% auto */
   background-size: 100%;
   animation: fade 20s linear;
   animation-iteration-count: infinite;
 }
 
+/* 设置背景图片 */
 .slider-item1 {
   background-image: url(imgs/1.jpg);
 }
@@ -47,6 +50,7 @@ li {
   background-image: url(imgs/5.jpg);
 }
 
+/* 设置动画 */
 @keyframes fade {
   0% {
     opacity: 0;
@@ -69,64 +73,76 @@ li {
   }
 }
 
-.slider-item{
-  opacity:0;
+.slider-item {
+  opacity: 0;
 }
-.slider-item1{
+
+.slider-item1 {
   animation-delay: -1s;
 }
-.slider-item2{
+
+.slider-item2 {
   animation-delay: 3s;
 }
-.slider-item3{
+
+.slider-item3 {
   animation-delay: 7s;
 }
-.slider-item4{
+
+.slider-item4 {
   animation-delay: 11s;
 }
-.slider-item5{
+
+.slider-item5 {
   animation-delay: 15s;
 }
 
-.focus-container{
-  position:absolute;
-  bottom:2%;
-  z-index:7;
-  left:50%;
+.focus-container {
+  position: absolute;
+  bottom: 2%;
+  z-index: 7;
+  left: 50%;
   margin-left: -45px;
 }
-.focus-container li{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  float:left;
-  margin-right:10px;
-  background:#fff;
-}
-.focus-item{
-  width:100%;
-  height:100%;
-  opacity: 0;
-  background:#51B1D9;
-  border-radius:inherit;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-name:fade;
-  animation-iteration-count: infinite;
-}
-.focus-item1{
-  animation-delay: -1s;
-}
-.focus-item2{
-  animation-delay: 3s;
-}
-.focus-item3{
-  animation-delay: 7s;
-}
-.focus-item4{
-  animation-delay: 11s;
-}
-.focus-item5{
-  animation-delay: 15s;
+
+.focus-container li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+  background: #fff;
 }
 
+.focus-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 0;
+  background: #51B1D9;
+  border-radius: inherit;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-name: fade;
+  animation-iteration-count: infinite;
+}
+
+.focus-item1 {
+  animation-delay: -1s;
+}
+
+.focus-item2 {
+  animation-delay: 3s;
+}
+
+.focus-item3 {
+  animation-delay: 7s;
+}
+
+.focus-item4 {
+  animation-delay: 11s;
+}
+
+.focus-item5 {
+  animation-delay: 15s;
+}
